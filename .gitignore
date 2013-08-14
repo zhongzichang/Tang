@@ -2,6 +2,7 @@
 [Bb]in/
 [Oo]bj/
 Library/
+Temp/
 
 # mstest test results
 TestResults
