@@ -291,15 +291,17 @@ namespace Tang
 						
 			if( layer.spritePrefab != null ){
 			
-				//Sprite sprite;
+				Sprite sprite = null;
 				if( layer.spriteInstance == null){
-					Sprite sprite = Instantiate(layer.spritePrefab) as Sprite;
+					sprite = Instantiate(layer.spritePrefab) as Sprite;
 					layer.spriteInstance = sprite;
 					sprite.transform.parent = layer.gameObject.transform;
-					layer.maxIndex = sprite.maxIndex + layer.frameDelay;
-					sprite.flipHorizontal = flipHorizontal;
-					sprite.flipVertical = flipVertical;
+				} else {
+					sprite = layer.spriteInstance;
 				}
+				layer.maxIndex = sprite.maxIndex + layer.frameDelay;
+				sprite.flipHorizontal = flipHorizontal;
+				sprite.flipVertical = flipVertical;
 			}
 		}
 		private void DestoryChildren(GameObject parentObject){
