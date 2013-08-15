@@ -1,4 +1,4 @@
 Tang
 ====
 
-A simple sprite animation framework for Unity3D
+A simple sprite animation plugin for Unity3D
